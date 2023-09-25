@@ -11,50 +11,42 @@ header {
     padding: 2%;
 }
 
-/* Alinea los elementos de la lista a la derecha */
 nav ul {
     text-align: right;
     margin-right: 4%;
 }
 
-/* Estilo para los elementos de la lista en el menú de navegación */
 nav ul li {
     display: inline;
-    margin-left: 4%; /* Margen a la izquierda entre elementos de la lista */
-    font-weight: bold; /* Establece el texto en negrita */
+    margin-left: 4%;
+    font-weight: bold;
     font-size: 1rem;
 }
 
-/* Estilo para los enlaces dentro de los elementos de lista */
 nav ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: inherit; /* Usa el color heredado del texto */
-    cursor: default; /* Cambia el cursor del mouse para que no parezca un enlace */
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
 }
 
+/* Sección de perfil */
 .section {
     padding: 5%;
-}
-
-
-h3 {
-    font-size: 3vw; /* Ajustado para mantener el aspecto original */
 }
 
 .profile {
     float: left;
     margin-right: 4%;
-    height: auto; /* Ajusta la altura automáticamente */
+    height: auto;
 }
 
 .profile img {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
-    margin-top: 1rem; /* Ajusta este valor según sea necesario */
+    margin-top: 1rem;
     margin-right: 4%;
 }
-
 
 .profile-name {
     font-size: 4rem;
@@ -64,19 +56,14 @@ h3 {
 .profile-txt {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 0; /* Elimina el espacio inferior */
+    margin-bottom: 0;
 }
 
-.profile-description {
+.profile-description,
+.profile-description-2 {
     font-size: 2rem;
     font-weight: 400;
-}
-
-.profile-description-2 {
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-bottom: 3rem; /* Espacio entre la descripción y el botón */
-    margin-right: 25rem; /* Puedes ajustar el valor de margen derecho según tus necesidades */
+    max-width: 100%;
 }
 
 .download-button {
@@ -90,98 +77,111 @@ h3 {
     border-radius: 8px;
 }
 
+/* Imágenes */
 .imagen-container {
     display: flex;
     align-items: center;
-    gap: 4rem; /* Espacio entre las imágenes */
-    margin-left: 40rem; /* Puedes ajustar el valor de margen derecho según tus necesidades */
-
+    gap: 2rem;
+    margin-left: 30%;
+    max-width: 100%;
+    padding: 0 5%;
 }
 
 .imagen {
-    width: 9rem; /* Establece el ancho deseado para las imágenes */
-    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    width: 9rem;
+    height: auto;
 }
 
+@media (max-width: 768px) {
+    .imagen-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 2%;
+    }
+}
+
+/* Experiencia y proyectos */
 .cards {
     display: flex;
-    gap: 5rem; /* Ajustar el espacio entre las tarjetas */
-    margin-left: 30rem; /* Puedes ajustar el valor de margen derecho según tus necesidades */
-
-
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 0 2%;
 }
 
 .card {
-    
-    width: 26rem; /* Cambiar a unidades rem */
-    padding: 2rem; /* Cambiar a unidades rem */
+    flex-basis: calc(33.333% - 2rem);
+    flex-grow: 1;
+    padding: 2rem;
     background-color: #27282f;
     border: 1px solid #27282f;
-    
+    margin-bottom: 2rem;
+    box-sizing: border-box;
 }
 
 .card-content {
-    margin-top: 1rem; /* Cambiar a unidades rem */
+    margin-top: 1rem;
 }
 
 .card-content h5 {
-    font-size: 1.8rem; /* Tamaño del subtítulo */
+    font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 0.5rem; /* Espacio entre el subtítulo y la lista de ítems */
+    margin-bottom: 0.5rem;
 }
 
 .card-content ul {
-    list-style-type: disc; /* Establece el tipo de viñeta para la lista de ítems */
-    margin-left: 1.5rem; /* Espacio a la izquierda de la lista */
+    list-style-type: disc;
+    margin-left: 1.5rem;
 }
 
 .card-content li {
-    font-size: 1.1rem; /* Tamaño del texto de la lista de ítems */
-    margin-bottom: 0.6rem; /* Espacio entre los elementos de la lista */
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
 }
 
 .card-txt {
     font-size: 2.2rem;
     color: #10f0fc;
 }
-.project-grid {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
 }
 
+/* Proyectos */
 .project {
     background-color: #27282f;
     border: 1px solid #27282f;
-    padding: 8px;
+    padding: 1rem;
     text-align: center;
+    margin: 2rem auto;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .project img {
-    max-width: 70%;
+    max-width: 50%;
     height: auto;
-    margin-bottom: 2rem;
-    margin-top: 1rem; /* Ajusta este valor según sea necesario */
-
+    margin-bottom: 1rem;
 }
 
 .project h5 {
     font-size: 1.2rem;
     color: #10f0fc;
-    margin: 5px 0;
 }
 
-.project a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
+/* Pie de página */
 footer {
     text-align: center;
-    margin-top: 2rem; /* Espacio superior */
-    padding-top: 2rem; /* Espacio superior */
+    margin-top: 2rem;
+    padding-top: 2rem;
     background-color: #202424;
     color: #f2f2f2;
     font-size: 1.4rem;
@@ -190,31 +190,29 @@ footer {
 .footer-logos {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espacio entre los logotipos */
-    margin-bottom: 20px; /* Espacio inferior */
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-logos img {
-    width: 32px; /* Ajusta el tamaño de los logotipos */
-    height: 32px; /* Ajusta el tamaño de los logotipos */
+    width: 32px;
+    height: 32px;
 }
 
 hr {
     border: none;
-    border-top: 1px solid #f2f2f2; /* Línea horizontal */
-    margin: 10px 0; /* Espacio entre la línea y el texto */
+    border-top: 1px solid #f2f2f2;
+    margin: 10px 0;
 }
 
-
-/* Cambia el color del <hr> y del texto dentro del footer */
 footer hr {
     border: none;
-    border-top: 1px solid #10f0fc; /* Cambia el color del <hr> */
-    margin: 10px 0; /* Espacio entre la línea y el texto */
+    border-top: 1px solid #10f0fc;
+    margin: 10px 0;
 }
 
 footer p {
     margin: 0;
     padding: 0;
-    color: #10f0fc; /* Cambia el color del texto del footer */
+    color: #10f0fc;
 }
