@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
     <title>Resume</title>
 </head>
-<body>
+<body id="body" class="dark-mode">
     <header>
         <nav>
             <ul>
+                <li><button id="toggle-button"></button></li>
                 <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#experiencia">EXPERIENCIA</a></li>
                 <li><a href="#proyectos">PROYECTOS</a></li>
@@ -17,6 +19,8 @@
             </ul>
         </nav>
     </header>
+    
+      
     <main>
         <section id="inicio" class="section">
             <div class="content">
@@ -32,9 +36,8 @@
                 </div>
             </div>
         </section>
-        <section id="inicio" class="section">
+        <section id="perfil" class="section">
             <div class="content">
-            
                 <h4 class="profile-txt">Perfil</h4>
                 <p class="profile-description-2">Poseo un gran interés por el ecosistema de startups en América Latina, donde busco 
                     activamente oportunidades para colaborar en proyectos que fomenten la innovación.
@@ -51,7 +54,7 @@
             <img src="images/png-transparent-microsoft-sql-server-microsoft-azure-sql-database-microsoft-text-logo-microsoft-azure.png" class="imagen">
             <img src="images/Logo_C_sharp.svg.png" class="imagen">  
         </div>
-        <section id="experiencia" class="section">
+        <section id="experiencia" class="section dark-mode">
             <div class="cards">
                 <div class="card">
                     <h4 class="card-txt">Desarrollador .NET</h4>
@@ -86,7 +89,7 @@
                 </div>
             </div>            
         </section>
-        <section id="proyectos" class="section">
+        <section id="proyectos" class="section dark-mode">
             <div class="content">
                 <h4 class="profile-txt">Proyectos</h4>
                 <div class="project">
@@ -96,7 +99,6 @@
                 </div>
             </div>
         </section>
-        
     </main>
     <footer id="contacto">
         <div class="footer-logos">

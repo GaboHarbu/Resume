@@ -4,6 +4,17 @@ body {
     font-family: 'Trebuchet MS';
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.light-mode {
+    background-color: #f2f2f2;
+    color: #202424;
+}
+
+body.dark-mode {
+    background-color: #202424;
+    color: #f2f2f2;
 }
 
 header {
@@ -26,7 +37,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: inherit;
-    cursor: default;
+    cursor: pointer;
+    transition: font-size 0.5s ease;
+}
+
+nav ul li a:hover {
+    font-size: 1.1rem;
 }
 
 /* Sección de perfil */
@@ -117,6 +133,7 @@ nav ul li a {
     border: 1px solid #27282f;
     margin-bottom: 2rem;
     box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .card-content {
@@ -164,6 +181,7 @@ nav ul li a {
     margin: 2rem auto;
     max-width: 100%;
     box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .project img {
@@ -185,6 +203,7 @@ footer {
     background-color: #202424;
     color: #f2f2f2;
     font-size: 1.4rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .footer-logos {
@@ -215,4 +234,74 @@ footer p {
     margin: 0;
     padding: 0;
     color: #10f0fc;
+}
+
+body.light-mode .card {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode .project {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode .card {
+    background-color: #27282f;
+    border: 1px solid #27282f;
+    color: #f2f2f2;
+}
+
+body.dark-mode .project {
+    background-color: #27282f;
+    border: 1px solid #27282f;
+    color: #f2f2f2;
+}
+
+body.light-mode header,
+body.light-mode footer {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode nav ul li a {
+    color: #000000;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #202424;
+    color: #f2f2f2;
+}
+
+body.dark-mode nav ul li a {
+    color: #f2f2f2;
+}
+
+#toggle-button {
+    background: none;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem;
+    border: none;
+    border-radius: 50%;
+    transition: color 0.3s ease-in-out; 
+    margin-right: 95%; /
+}
+
+#toggle-button:before {
+    content: '🌙';
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 2rem;
+    color: #ffd700;
+    transition: color 0.3s ease-in-out;
+}
+
+#toggle-button.active:before,
+body[theme="dark"] #toggle-button:before {
+    content: '☀️';
+    color: #ffd700;
 }
